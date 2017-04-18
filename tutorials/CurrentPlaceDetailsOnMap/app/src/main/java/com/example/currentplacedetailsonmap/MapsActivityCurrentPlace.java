@@ -421,6 +421,9 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                     new LatLng(mLastKnownLocation.getLatitude(),
                             mLastKnownLocation.getLongitude()), DEFAULT_ZOOM));
+            mLatitude = mLastKnownLocation.getLatitude();
+            mLongitude = mLastKnownLocation.getLongitude();
+
         } else {
             Log.d(TAG, "Current location is null. Using defaults.");
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mDefaultLocation, DEFAULT_ZOOM));
